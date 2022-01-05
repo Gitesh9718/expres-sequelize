@@ -1,0 +1,19 @@
+[
+  {
+    "name": "backend-production",
+    "script": "bin/www",
+    "exec_mode": "cluster",
+    "instances": 4,
+    "watch": false,
+    "merge_logs": true,
+    "autorestart": true,
+    "exec_interpreter": "node",
+    "log_date_format": "DD-MMM-YY h:mm:ss A",
+    "post_update": [
+      "npm install"
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
+]

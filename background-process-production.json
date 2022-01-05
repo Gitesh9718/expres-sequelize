@@ -1,0 +1,19 @@
+[
+  {
+    "name": "background-process-production",
+    "script": "background-process.js",
+    "exec_mode": "fork",
+    "instances": 1,
+    "watch": false,
+    "merge_logs": true,
+    "autorestart": true,
+    "exec_interpreter": "node",
+    "log_date_format": "DD-MMM-YY h:mm:ss A",
+    "post_update": [
+      "npm install"
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
+]
